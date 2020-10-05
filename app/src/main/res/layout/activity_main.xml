@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/rounded_cornersin"
+        android:fontFamily="serif"
+        android:onClick="startpress"
+        android:tag="0"
+        android:text="@string/start"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FBF28E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textviewtimer"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="165dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_cornerstxt"
+            android:paddingVertical="5dp"
+            android:text="15s"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textviewquestion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textviewquestion"
+            android:layout_width="360dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="#F8E5C3"
+            android:clickable="false"
+            android:paddingVertical="15dp"
+            android:text="Question"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewtimer" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout1"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="35dp"
+            app:columnCount="2"
+            app:layout_constraintBottom_toTopOf="@+id/textviewcheck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewquestion"
+            app:rowCount="2">
+
+            <Button
+                android:id="@+id/button1"
+                android:background="@drawable/rounded_corners"
+                android:onClick="choose"
+                android:tag="0"
+                android:text="option1"
+                android:textSize="18sp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:background="@drawable/rounded_corners"
+                android:onClick="choose"
+                android:tag="1"
+                android:text="Option2"
+                android:textSize="18sp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button3"
+                android:background="@drawable/rounded_corners"
+                android:onClick="choose"
+                android:tag="2"
+                android:text="Option3"
+                android:textSize="18sp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button4"
+                android:background="@drawable/rounded_corners"
+                android:onClick="choose"
+                android:tag="3"
+                android:text="Option4"
+                android:textSize="18sp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/textviewcheck"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_cornerstxt"
+            android:backgroundTint="@android:color/background_light"
+            android:paddingVertical="8dp"
+            android:text="Correct"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textviewscore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout1" />
+
+        <TextView
+            android:id="@+id/textviewscore"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/rounded_cornerstxt"
+            android:paddingVertical="8dp"
+            android:text="Score"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewcheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
