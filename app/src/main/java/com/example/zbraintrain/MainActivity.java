@@ -162,17 +162,6 @@ public class MainActivity extends AppCompatActivity {
         amg = (AudioManager) getSystemService(AUDIO_SERVICE);
         mpyes = MediaPlayer.create(this, R.raw.yessoundyes);
         mpno = MediaPlayer.create(this, R.raw.nosoundno);
-        hide();
-    }
 
-    private void hide(){
-        this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        );
     }
 }
